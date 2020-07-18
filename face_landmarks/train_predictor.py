@@ -1,14 +1,10 @@
-import os
 import dlib
 from configparser import ConfigParser
 
 def main():
-    # create parser instance
+
     config = ConfigParser()
-
-    # Read detection.cfg
     config.read('config/landmarks.cfg')
-
     landmarks_training_xml = config.get('training', 'landmarks_training_xml')
     landmarks_testing_xml = config.get('testing', 'landmarks_testing_xml')
     predictor_dat = config.get('model', 'predictor_dat')
