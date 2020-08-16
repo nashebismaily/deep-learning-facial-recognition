@@ -56,6 +56,8 @@ This codebase has been tested on RHEL7 and MacOS-PyCharm
 
 2. Use [ImgLab](https://imglab.in/) to annotate facial landmarks, saving as dlib points xml
 
+   ![facial_landmarks](resources/icons/dlib_nasheb.png)
+
    The facial landmark annotations should follow the 68-point guide below:
    
    ![facial_landmarks](resources/icons/dlib_landmarks.png)
