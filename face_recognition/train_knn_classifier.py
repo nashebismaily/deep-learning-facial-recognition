@@ -44,10 +44,10 @@ def train(face_detector, face_encoder, face_landmarks, knn_algorithm, weights, t
         n_neighbors = int(round(math.sqrt(len(face_encoding))))
 
     # Create and train the KNN classifier
-    knn_clf = neighbors.KNeighborsClassifier(n_neighbors=n_neighbors, algorithm=knn_algorithm, weights=weights)
-    knn_clf.fit(face_encoding, labels)
+    knn_classifier = neighbors.KNeighborsClassifier(n_neighbors=n_neighbors, algorithm=knn_algorithm, weights=weights)
+    knn_classifier.fit(face_encoding, labels)
 
-    return knn_clf
+    return knn_classifier
 
 def main():
 
