@@ -124,7 +124,7 @@ This codebase has been tested on RHEL7 and MacOS-PyCharm
 
 2. Download Pre-Trained FaceNET Encoding Model
 
-    [FaceNET_Encoding](https://srv-file22.gofile.io/download/OmhUTs/darknet53.conv.74)
+    [FaceNET_Encoding](https://srv-file16.gofile.io/download/je8iTi/resnet_face_encoding.dat)
     
     Place the resnet_face_encoding.dat into this folder:
 
