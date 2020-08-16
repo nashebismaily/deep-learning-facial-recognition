@@ -5,8 +5,7 @@ import numpy as np
 import dlib
 from configparser import ConfigParser
 from imutils import face_utils
-from utils import face_locations
-from utils import face_encodings
+from utils import faces
 from utils import landmarks
 
 # Predict Faces
@@ -15,12 +14,12 @@ def predict(face_detector, face_encoder, face_landmarks, img, threshold, model_p
     with open(model_path, 'rb') as f:
         knn_clf = pickle.load(f)
 
-    face_locations_img = face_locations.get_face_locations(face_detector,img)
+    face_locations_img = faces.get_face_locations(face_detector,img)
     if len(face_locations_img) == 0:
         return []
 
     # Find encodings for image
-    faces_encodings = face_encodings.get_face_encodings(face_encoder, face_landmarks,img, known_face_locations=face_locations_img)
+    faces_encodings = faces.get_face_encodings(face_encoder, face_landmarks,img, known_face_locations=face_locations_img)
 
     # Find best matches for face in image above threshold
     closest_distances = knn_clf.kneighbors(faces_encodings, n_neighbors=1)
