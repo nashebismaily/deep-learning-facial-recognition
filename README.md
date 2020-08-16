@@ -17,7 +17,7 @@ These instructions will allow you to run your own live-stream object detection.
 * [Train Facial Landmark Detector](#train-facial-landmark-detector)
 * [Run Facial Landmark Detection](#run-facial-landmark-detection)
 * [Train Facial Recognition Classifier](#train-facial-recognition-classifier)
-* [Run Facial Recognition](#run-facial-recogniton)
+* [Run Facial Recognition](#run-facial-recognition)
 
 ### Prerequisites
 
