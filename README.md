@@ -121,7 +121,6 @@ This codebase has been tested on RHEL7 and MacOS-PyCharm
 
    ```
     cp face_landmarks/models/face_landmarks.dat face_recognition/models/
-
    ```
 
 2. Download Pre-Trained FaceNET Encoding Model
