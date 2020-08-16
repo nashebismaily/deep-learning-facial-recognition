@@ -8,8 +8,7 @@ from PIL import Image
 import numpy as np
 import dlib
 from configparser import ConfigParser
-from utils import face_locations
-from utils import face_encodings
+from utils import faces
 
 # Get image paths for each labeled person in training directory
 def get_image_paths(folder):
@@ -31,13 +30,13 @@ def train(face_detector, face_encoder, face_landmarks, knn_algorithm, weights, t
             im = Image.open(img_path)
             im = im.convert('RGB')
             image = np.array(im)
-            face_bounding_boxes = face_locations.get_face_locations(face_detector, image)
+            face_bounding_boxes = faces.get_face_locations(face_detector, image)
 
             if len(face_bounding_boxes) != 1:
                 continue
             else:
                 # Get face encodings for current person
-                face_encoding.append(face_encodings.get_face_encodings(face_encoder, face_landmarks, image, known_face_locations=face_bounding_boxes)[0])
+                face_encoding.append(faces.get_face_encodings(face_encoder, face_landmarks, image, known_face_locations=face_bounding_boxes)[0])
                 labels.append(label_dir)
 
     # Automatically select number of neighbors for classifier
